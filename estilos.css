@@ -1,9 +1,26 @@
+/* 🎨 Variables de color y estilos */
+:root {
+    --color-bg: #f5f5f5;
+    --color-text: #333;
+    --color-heading: #222;
+    --color-subtext: #555;
+    --color-muted: #777;
+    --color-border: #000;
+    --color-accent: #96959c;
+    --color-card-bg: #fff;
+
+    --shadow-light: 0 6px 12px rgba(0,0,0,0.1);
+    --shadow-medium: 0 6px 15px rgba(0,0,0,0.15);
+    --transition: 0.3s ease;
+}
+
+/* Reset + base */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -13,7 +30,7 @@ body {
     padding: 20px;
 }
 
-
+/* 🔹 Header */
 .header {
     display: flex;
     flex-direction: row;
@@ -30,13 +47,13 @@ body {
 .header h1 {
     font-size: 36px;
     font-weight: bold;
-    color: #222;
+    color: var(--color-heading);
     margin: 0 0 20px 0; 
 }
 
 .header p {
     font-size: 18px;
-    color: #555;
+    color: var(--color-subtext);
     margin: 0;
 }
 
@@ -45,16 +62,16 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #96959c;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px solid var(--color-accent);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .header img.profile-pic:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-medium);
 }
 
-
+/* 🔹 Botones */
 .buttons {
     margin-top: 20px;
 }
@@ -63,16 +80,22 @@ body {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
-    color: #000000;
-    border: solid 2px black;
+    color: var(--color-border);
+    border: solid 2px var(--color-border);
     padding: 10px;
     border-radius: 12px;
     margin-right: 10px;
     font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform var(--transition), background-color var(--transition), color var(--transition);
 }
 
+.btn:hover {
+    background: var(--color-border);
+    color: #fff;
+    transform: scale(1.05);
+}
 
+/* 🔹 Skills */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -88,8 +111,8 @@ body {
     flex-direction: column;
     align-items: flex-start; 
     font-weight: bold;
-    color: #222;
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-heading);
+    transition: transform var(--transition), color var(--transition), box-shadow var(--transition);
     cursor: pointer;
     perspective: 1000px;
     flex: 1 1 calc(25% - 20px); 
@@ -100,15 +123,14 @@ body {
 .skill span {
     font-size: 16px;
     background-color: transparent;
-    color: #000000;
+    color: var(--color-border);
     border-radius: 10px;
     padding: 5px 15px;
-    transition: all 0.3s ease;
+    transition: all var(--transition);
     box-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
 
-
-
+/* 🔹 Educación */
 .education .entry {
     display: flex;
     align-items: center;
@@ -124,6 +146,7 @@ body {
     object-fit: cover;
 }
 
+/* Responsive educación */
 @media (max-width: 600px) {
     .education .entry {
         flex-direction: column;
@@ -134,13 +157,12 @@ body {
     }
 }
 
-
-
+/* 🔹 Títulos */
 h2 {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #222;
+    color: var(--color-heading);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
@@ -151,7 +173,7 @@ h2 {
     margin-bottom: 50px;
 }
 
-
+/* 🔹 Entries */
 .entry {
     display: flex;
     align-items: center;
@@ -159,7 +181,7 @@ h2 {
     margin-bottom: 20px;
     padding: 10px 0;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition), box-shadow var(--transition);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s forwards;
@@ -173,7 +195,7 @@ h2 {
 
 .entry:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
 }
 
 .entry img {
@@ -191,22 +213,22 @@ h2 {
 .details h3 {
     font-size: 16px;
     margin: 0 0 5px 0;
-    color: #555;
+    color: var(--color-subtext);
 }
 
 .details p {
     font-size: 14px;
     margin: 0;
-    color: #777;
+    color: var(--color-muted);
 }
 
 .date {
     font-size: 14px;
-    color: #777;
+    color: var(--color-muted);
     white-space: nowrap;
 }
 
-
+/* 🔹 Animación */
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -214,7 +236,7 @@ h2 {
     }
 }
 
-
+/* 🔹 Responsive */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -248,13 +270,81 @@ h2 {
     }
 }
 
+/* 🔹 About */
 .about p {
     font-family: Arial, Helvetica, sans-serif;
-    color: #000000;
+    color: var(--color-border);
 }
 
 .about mark {
     background-color: rgb(126, 123, 123);
     color: #fff;
-    box-shadow: #777;
+    box-shadow: 0 0 5px var(--color-muted);
+}
+
+/* 🔹 Projects */
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+    padding: 18px;
+    width: 320px;
+    background: var(--color-card-bg);
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-light);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-border);
+}
+
+.card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: var(--color-subtext);
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.card ul li {
+    margin: 0;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: var(--color-border);
+    border: 2px solid var(--color-border);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all var(--transition);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.card ul li a:hover {
+    background: var(--color-border);
+    color: #fff;
 }
