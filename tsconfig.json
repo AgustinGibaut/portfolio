@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    // Especifica el directorio raíz para los archivos fuente
+    "rootDir": "./src",   // Deja activado esto si tienes tu código fuente en `src` (común en muchos proyectos).
+
+    // Directorio de salida para los archivos compilados
+    "outDir": "./dist",  // Asegúrate de que el código compilado se guarde en una carpeta llamada `dist`.
+
+    // Configuración del módulo y la versión de ECMAScript que se va a usar
+    "module": "ESNext",   // Para usar módulos ES6+ (mejor compatibilidad y más moderna).
+    "target": "ESNext",   // Para generar código JavaScript compatible con ESNext.
+
+    // Configuraciones de los archivos de declaración (útil si vas a crear una librería, pero puede eliminarse si no es necesario)
+    "declaration": true,  // Generar archivos `.d.ts` con las declaraciones de tipo.
+    "declarationMap": true,  // Mapas de declaración para ayudar con la depuración.
+
+    // Configuración de mapas de origen para facilitar la depuración
+    "sourceMap": true,  // Genera un archivo `.map` para la depuración en el navegador.
+
+    // Configuración de comprobaciones más estrictas
+    "strict": true,   // Habilita todas las verificaciones estrictas de TypeScript.
+
+    // Configuración para trabajar con React (si no usas React, esta opción puede eliminarse)
+    "jsx": "react-jsx", // Solo si estás trabajando con React, si no, elimínala.
+
+    // Otras opciones recomendadas
+    "isolatedModules": true,  // Requiere que cada archivo `.ts` o `.tsx` sea independiente y compilable por separado.
+    "skipLibCheck": true,  // Omite la verificación de tipos de archivos de definición de bibliotecas para acelerar la compilación.
+
+    // Configuración para mejorar la comprobación de tipos
+    "noUncheckedIndexedAccess": true,  // Habilita la comprobación de acceso no verificado a los índices.
+    "exactOptionalPropertyTypes": true,  // Asegura que las propiedades opcionales se traten de manera más precisa.
+
+    // Recomendaciones adicionales:
+    // "noImplicitReturns": true,  // Obliga a las funciones a devolver un valor explícito.
+    // "noImplicitOverride": true,  // Obliga a usar `override` cuando se sobrescriben métodos.
+    // "noUnusedLocals": true,  // Emitir advertencias si hay variables no utilizadas.
+    // "noUnusedParameters": true,  // Emitir advertencias si hay parámetros no utilizados.
+    // "noFallthroughCasesInSwitch": true,  // Previene caídas accidentales entre los casos de `switch`.
+    // "noPropertyAccessFromIndexSignature": true,  // Prohíbe el acceso a propiedades desde una firma de índice.
+
+    // Otras configuraciones para el comportamiento de módulos:
+    "moduleDetection": "force",  // Fuerza la detección de módulos.
+    "noUncheckedSideEffectImports": true  // Deshabilita las importaciones con efectos secundarios no verificados.
+  },
+  "include": [
+    "src/**/*"  // Incluye todos los archivos TypeScript dentro de la carpeta `src`.
+  ],
+  "exclude": [
+    "node_modules"  // Excluye la carpeta `node_modules` de la compilación.
+  ]
+}

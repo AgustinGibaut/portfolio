@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Agustin Gibaut</title>
+    <link rel="stylesheet" href="src/app.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+    <div class="dot dot4"></div>
+  </div>
+    
+<header class="navbar-container">
+  <nav class="navbar">
+    <div class="logo">AgustinJSX</div>
+    
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#educacion" class="nav-link">Educacion</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+
+    <!-- Botón hamburguesa móvil -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <img src="file.jpg" alt="Agustín Gibaut" class="profile-img" />
+    <h1>Agustín Gibaut</h1>
+    <p class="title">Fullstack Web Dev Trainee.</p>
+    <p class="subtitle">Estudiante de Desarrollo de Software.</p>
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</section><!-- ==================== ABOUT ME – con íconos ==================== -->
+<section class="about" id="about">
+  <h2>Sobre mí</h2>
+  <div class="about-text">
+    <p>Soy <strong>Agustín Gibaut</strong>, desarrollador fullstack especializado en <strong>TypeScript</strong> y <strong>Astro</strong>. Vivo en Córdoba, Argentina.</p>
+
+    <p>Mi expertise está en construir aplicaciones modernas, rápidas y escalables usando <strong>TypeScript</strong> como lenguaje principal. Domino el tipado estricto, interfaces avanzadas, generics, utility types y arquitectura limpia que evita errores en producción.</p>
+
+    <p>Con <strong>Astro</strong> tengo experiencia sólida creando sitios ultra performantes (100/100 Lighthouse), con islands architecture, integración perfecta con React/Vue/Svelte y despliegues optimizados.</p>
+
+    <p>Mi stack actual:</p>
+
+    <div class="stack-list">
+      <div class="stack-item">
+        <i class="devicon-typescript-plain colored"></i>
+        <span><strong>TypeScript</strong> – strict mode, ESLint + Prettier profesional</span>
+      </div>
+      <div class="stack-item">
+        <i class="devicon-react-original colored"></i>
+        <span><strong>React + TypeScript</strong> – cuando se necesita interactividad pesada</span>
+      </div>
+      <div class="stack-item">
+        <i class="devicon-nodejs-plain colored"></i>
+        <span><strong>Node.js / Express</strong> – APIs ligeras y rápidas</span>
+      </div>
+      <div class="stack-item">
+        <i class="fab fa-vercel"></i>
+        <i class="fab fa-netlify"></i>
+        <i class="fab fa-cloudflare"></i>
+        <span><strong>Vercel / Netlify / Cloudflare Pages</strong></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ==================== EDUCACIÓN ==================== -->
+  <section class="education" id="educacion">
+    <h2>Educación</h2>
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-year">2024 – Actualidad</div>
+        <div class="timeline-content">
+          <h3>Desarrollo Fullstack</h3>
+          <h4>INSTITUTO SUPERIOR POLIITECCNICO CORDOBA</h4>
+          <p>+190 HORAS python · JavaScript · Typescript · Node.js · Firebase · PostgreSQL · Scrum</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h3>SECUNDARIO COMPLETO</h3>
+          <h4>Maria Ignacia Navarro de Lbat</h4>
+          <p>En curso · Córdoba, Argentina</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ==================== CONTACTO – VERSIÓN AGUS GIBAUT ==================== -->
+<section class="contact" id="contacto">
+  <h2>Contacto</h2>
+  <p class="contact-subtitle">Si querés charlar de código, proyectos o tomar un café virtual desde Córdoba ✌️</p>
+
+  <div class="contact-grid">
+    <!-- Email -->
+    <a href="mailto:agusgibaut693@gmail.com" class="contact-card">
+      <div class="contact-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="contact-text">
+        <strong>Email</strong>
+        <span>agusgibaut693@gmail.com</span>
+      </div>
+      <i class="fas fa-arrow-right contact-arrow"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5493512580435" target="_blank" class="contact-card">
+      <div class="contact-icon whatsapp">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <div class="contact-text">
+        <strong>WhatsApp</strong>
+        <span>+54 9 351 258-0435</span>
+      </div>
+      <i class="fas fa-arrow-right contact-arrow"></i>
+    </a>
+
+  <p class="contact-footer">
+    Respondo rápido (casi siempre con un meme de TypeScript incluido)
+  </p>
+</section>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+      <!-- Devicons (para TypeScript, Astro, React, Node.js) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
